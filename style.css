@@ -1,0 +1,47 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: #4a90e2;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+h1 {
+    text-align: left;
+}
+
+main {
+  padding: 1.5rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.post-preview {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.post-preview h2 a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+}
