@@ -2,19 +2,23 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
+  background: #0b0d15;
   color: #333;
 }
 
 header {
-  background: #4a90e2;
+  background: #071143;
   color: white;
   padding: 0.5rem;
   text-align: center;
 }
 
-h1 {
-    text-align: left;
+.postheader {
+    padding: 0rem;
+}
+
+p {
+    color: #e2e2e2;
 }
 
 main {
@@ -24,11 +28,48 @@ main {
 }
 
 .post-preview {
-  background: white;
+  background: #1c1f2b;
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.downloadbutton {
+    font-weight: bold;
+    width: 256px;
+    height: 54px;
+    background-color: #0000ff;
+    border: none;
+    border-radius: 12px;
+    color: #bcbcbc;
+}
+
+.downloadbutton:active {
+    border: 2px solid #0000ff;
+    background-color: #000000;
+}
+
+.post-preview::after {
+    content: "";
+    position: absolute;
+    width: 99%;
+    height: 99%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 4px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
 }
 
 .post-preview h2 a {
@@ -36,12 +77,41 @@ main {
   text-decoration: none;
 }
 
+.downloadbuttonpanel {
+    display: grid;
+    place-items: center;
+}
+
+.divider {
+    height: 50px;
+    width: 100%;
+}
+
 h2 {
     text-align: center;
+}
+
+.packversion {
+    font-weight: normal;
+    color: #a1a1a1;
+    font-size: 12;
+}
+
+.cp {
+    color: #a1a1a1;
 }
 
 footer {
   text-align: center;
   padding: 1rem;
-  background: #eee;
+  background: #071143;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
 }
